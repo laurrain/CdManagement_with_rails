@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
    resources :albums
-   root 'welcome#index'
+   root 'albums#index'
    get    '/albums/:id(.:format)'  =>    'albums#show'
 
    get    '/albums(.:format)'    =>      'albums#index'
