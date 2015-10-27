@@ -1,0 +1,23 @@
+<p>
+  <strong>Title:</strong>
+  <%= @album.title %>
+</p>
+
+<p>
+  <strong>Artists:</strong>
+  <%= @album.artists %>
+</p>
+
+<p>
+  <strong>Cover:</strong>
+  <%= @album.cover %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @album.year %>
+</p>
+
+<%= link_to 'Edit', edit_album_path(@album) %> |
+<%= link_to 'Back', albums_path %>
+ 

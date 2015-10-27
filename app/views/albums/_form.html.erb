@@ -1,0 +1,48 @@
+<link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="static/css/main_page.css">
+<link href='static/css/simplesidebar.css' rel='stylesheet' type='text/css'>
+<%= stylesheet_link_tag    "application" %>
+<%= javascript_include_tag "application" %>
+<script src="/assets/javascripts/jquery.min.js"></script>
+<script src="/assets/javascripts/bootstrap.min.js"></script>
+<%= form_for @album do |f| %>
+ 
+  <% if @album.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@album.errors.count, "error") %> prohibited
+        this album from being saved:
+      </h2>
+      <ul>
+        <% @album.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :artists %><br>
+    <%= f.text_field :artists %>
+  </p>
+ 
+ <p>
+    <%= f.label :cover %><br>
+    <%= f.text_field :cover %>
+  </p>
+
+  <p>
+    <%= f.label :year %><br>
+    <%= f.text_field :year %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>

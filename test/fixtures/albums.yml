@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  artists: MyString
+  cover: MyString
+  year: 2015-10-26
+
+two:
+  title: MyString
+  artists: MyString
+  cover: MyString
+  year: 2015-10-26

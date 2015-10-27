@@ -1,0 +1,29 @@
+<% @albums.each do |album| %>
+    <tr>
+      <td><%= album.title %></td>
+      <td><%= album.artists %></td>
+      <td class="col-md-1"><%= album.cover %></td>
+      <td class="col-md-6"><%= album.year %></td>
+      <td><%= link_to 'Show', album_path(album), remote: true, class: "btn btn-default" %></td>
+      <td><%= link_to 'Edit', edit_album_path(album), remote: true, class: "btn btn-default" %></td>
+      <td><%= link_to 'Delete', album_path(album),
+              method: :delete,
+              data: { confirm: 'Are you sure?' }, remote: true, class: "btn btn-danger" %></td>
+    </tr>
+<% end %>
+
+<table class="pretty">
+  <tr>
+    <th><%= sortable "title" %></th>
+    <th><%= sortable "artists" %></th>
+    <th><%= sortable "cover"%></th>
+  </tr>
+  <% for album in @albums %>
+  <tr>
+    <td><%= album.title %></td>
+    <td class="artists"></td>
+    <td><%= album.cover %></td>
+  </tr>
+  <% end %>
+</table>
+  

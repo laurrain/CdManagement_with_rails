@@ -1,0 +1,25 @@
+<div class="grid">
+  <div class="album">
+    <table class="table table-bordered table-striped">
+  <tr>
+    <th>Title</th>
+    <th>Artists</th>
+    <th>Cover</th>
+    <th>Year</th>
+  </tr>
+  <% @albums.each do |album| %>
+    <tr>
+      <td><%= album.title %></td>
+      <td><%= album.artists %></td>
+      <td class="col-md-1"><%= album.cover %></td>
+      <td class="col-md-6"><%= album.year %></td>
+      <td><%= link_to 'Show', album_path(album), class: "btn btn-default" %></td>
+      <td><%= link_to 'Edit', edit_album_path(album),class: "btn btn-default" %></td>
+      <td><%= link_to 'Delete', album_path(album),
+              method: :delete,
+              data: { confirm: 'Are you sure?' },class: "btn btn-danger" %></td>
+    </tr>
+<% end %>
+</table>
+</div>
+</div>
