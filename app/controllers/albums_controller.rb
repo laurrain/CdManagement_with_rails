@@ -7,11 +7,7 @@ class AlbumsController < ApplicationController
       @albums = Album.order("created_at DESC")
     end
   end
-	
-	#def index
-    	#@albums = Album.all
-  	#end
-
+  
 	def show
     	@album = Album.find(params[:id])
   	end
