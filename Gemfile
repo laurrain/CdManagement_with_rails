@@ -35,7 +35,9 @@ gem 'rails_12factor', group: :production
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-
+group :production do
+  gem 'pg'
+end
 group :development, :test do
   gem 'sqlite3', '1.3.11'
 end
