@@ -50,11 +50,6 @@ class AlbumsController < ApplicationController
  
   		redirect_to albums_path
 	end
-
-	def self.search(query)
-    # where(:title, query) -> This would return an exact match of the query
-    where("title like ?", "%#{query}%") 
-  end
  
 private
   def album_params

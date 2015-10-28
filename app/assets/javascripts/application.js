@@ -12,12 +12,9 @@
 //
 //=require jquery
 //require jquery-ui
-//require jquery_ujs
+//=require jquery_ujs
 //=require bootstrap.min 
 //require turbolinks
 // require_tree .
-  // Search form.
-  jQuery('#albums_search').submit(function () {
-    jQuery.get(this.action, $(this).serialize(), null, 'script');
-    return false;
-  });
+  .
+  
