@@ -3,7 +3,7 @@ class Album < ActiveRecord::Base
                       length: { minimum: 4 }
 
     def self.search(query)
-    	where("title like ? OR artists like ? OR cover like ?", "%#{query}%", "%#{query}%", "%#{query}%") 
-  	end
+    	where("title like ? OR albums.artists like ?  OR albums.cover like ?", "%#{query}%", "%#{query}%", "%#{query}%") 
+    end
 
 end
