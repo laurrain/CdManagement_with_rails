@@ -10,12 +10,12 @@ class AlbumsController < ApplicationController
   
 	def show
     	@album = Album.find(params[:id])
-  	end
+  end
 
 	def new
 		@album = Album.new
 		
-    end
+  end
 
     def edit
   		@album = Album.find(params[:id])
